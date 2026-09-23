@@ -20,7 +20,7 @@ import re
 import shutil
 from collections import Counter
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from itertools import combinations
 from pathlib import Path
 
@@ -433,7 +433,7 @@ def simulate(ctx: Context, team_a_id: str, team_b_id: str, seed: int | None = No
     match_id = _next_match_id()
     log = simulate_match(match_id, ta, tb, ctx.lookup, seed=seed,
                          chemistry={ta.team_id: ta.chemistry_score, tb.team_id: tb.chemistry_score})
-    log.played_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    log.played_at = datetime.now(UTC).isoformat(timespec="seconds")
     log.team_names = {t.team_id: t.name for t in (ta, tb)}
     log.team_versions = {t.team_id: t.version for t in (ta, tb)}
     log.lineups = {t.team_id: {s.slot_id: s.player_id for s in t.slots if s.player_id} for t in (ta, tb)}
@@ -824,7 +824,7 @@ def scouting_assessment(ctx: Context, player_id: str) -> dict:
 # ---------------------------------------------------------------------------
 
 def _now() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+    return datetime.now(UTC).isoformat(timespec="seconds")
 
 
 def _read_json(path: Path) -> dict | None:
