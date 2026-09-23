@@ -1,0 +1,28 @@
+{
+  "4-3-3": [
+    {"slot_id": "GK",    "position": "GK",   "foot_bonus": null},
+    {"slot_id": "LB",    "position": "FB",   "foot_bonus": "left"},
+    {"slot_id": "CB_L",  "position": "CB",   "foot_bonus": null},
+    {"slot_id": "CB_R",  "position": "CB",   "foot_bonus": null},
+    {"slot_id": "RB",    "position": "FB",   "foot_bonus": "right"},
+    {"slot_id": "DM",    "position": "DM",   "foot_bonus": null},
+    {"slot_id": "CM_L",  "position": "CM",   "foot_bonus": null},
+    {"slot_id": "CM_R",  "position": "CM",   "foot_bonus": null},
+    {"slot_id": "LW",    "position": "WING", "foot_bonus": "left"},
+    {"slot_id": "RW",    "position": "WING", "foot_bonus": "right"},
+    {"slot_id": "ST",    "position": "ST",   "foot_bonus": null}
+  ],
+  "4-2-3-1": [
+    {"slot_id": "GK",    "position": "GK",   "foot_bonus": null},
+    {"slot_id": "LB",    "position": "FB",   "foot_bonus": "left"},
+    {"slot_id": "CB_L",  "position": "CB",   "foot_bonus": null},
+    {"slot_id": "CB_R",  "position": "CB",   "foot_bonus": null},
+    {"slot_id": "RB",    "position": "FB",   "foot_bonus": "right"},
+    {"slot_id": "DM_L",  "position": "DM",   "foot_bonus": null},
+    {"slot_id": "DM_R",  "position": "DM",   "foot_bonus": null},
+    {"slot_id": "LW",    "position": "WING", "foot_bonus": "left"},
+    {"slot_id": "AM",    "position": "AM",   "foot_bonus": null},
+    {"slot_id": "RW",    "position": "WING", "foot_bonus": "right"},
+    {"slot_id": "ST",    "position": "ST",   "foot_bonus": null}
+  ]
+}

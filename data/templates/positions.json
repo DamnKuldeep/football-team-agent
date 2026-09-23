@@ -1,0 +1,82 @@
+[
+  {
+    "position": "GK",
+    "formation_slot": "GENERIC",
+    "attribute_weights": {
+      "gk_reflexes": 0.30, "gk_handling": 0.20, "gk_positioning": 0.25,
+      "gk_kicking": 0.15, "composure": 0.10
+    },
+    "hard_filters": [],
+    "soft_bonuses": []
+  },
+  {
+    "position": "CB",
+    "formation_slot": "GENERIC",
+    "attribute_weights": {
+      "tackling_standing": 0.20, "marking": 0.20, "heading_accuracy": 0.15,
+      "heading_power": 0.10, "positioning": 0.15, "passing_short": 0.10, "pace": 0.10
+    },
+    "hard_filters": [],
+    "soft_bonuses": []
+  },
+  {
+    "position": "FB",
+    "formation_slot": "GENERIC",
+    "attribute_weights": {
+      "pace": 0.15, "stamina": 0.15, "tackling_standing": 0.15, "crossing": 0.15,
+      "passing_short": 0.15, "positioning": 0.10, "dribbling": 0.15
+    },
+    "hard_filters": [],
+    "soft_bonuses": []
+  },
+  {
+    "position": "DM",
+    "formation_slot": "GENERIC",
+    "attribute_weights": {
+      "tackling_standing": 0.20, "positioning": 0.20, "passing_short": 0.15,
+      "marking": 0.15, "stamina": 0.15, "vision": 0.15
+    },
+    "hard_filters": [],
+    "soft_bonuses": []
+  },
+  {
+    "position": "CM",
+    "formation_slot": "GENERIC",
+    "attribute_weights": {
+      "passing_short": 0.20, "vision": 0.15, "passing_long": 0.10, "stamina": 0.15,
+      "tackling_standing": 0.10, "dribbling": 0.15, "composure": 0.15
+    },
+    "hard_filters": [],
+    "soft_bonuses": []
+  },
+  {
+    "position": "AM",
+    "formation_slot": "GENERIC",
+    "attribute_weights": {
+      "through_ball": 0.20, "vision": 0.20, "dribbling": 0.15, "passing_short": 0.15,
+      "finishing": 0.10, "composure": 0.10, "ball_control": 0.10
+    },
+    "hard_filters": [],
+    "soft_bonuses": []
+  },
+  {
+    "position": "WING",
+    "formation_slot": "GENERIC",
+    "attribute_weights": {
+      "pace": 0.20, "dribbling": 0.20, "crossing": 0.15, "finishing": 0.10,
+      "ball_control": 0.15, "acceleration": 0.10, "stamina": 0.10
+    },
+    "hard_filters": [],
+    "soft_bonuses": []
+  },
+  {
+    "position": "ST",
+    "formation_slot": "GENERIC",
+    "attribute_weights": {
+      "finishing": 0.30, "heading_accuracy": 0.15, "positioning": 0.15,
+      "composure": 0.15, "pace": 0.10, "ball_control": 0.15
+    },
+    "hard_filters": [],
+    "soft_bonuses": []
+  }
+]

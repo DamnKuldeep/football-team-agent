@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -e ".[dev,ui]"
+
+      - name: Lint (ruff)
+        run: ruff check .
+
+      - name: Validate template/formation JSON schemas
+        run: |
+          python -c "
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0, 'src')
+          from fta.models import PositionTemplate
+
+          # every position template must have weights summing to ~1.0 and
+          # reference only known attribute names -- validated by the
+          # pydantic model itself, so a bad hand-edit fails CI immediately.
+          raw = json.loads(Path('data/templates/positions.json').read_text())
+          for t in raw:
+              PositionTemplate.model_validate(t)
+          print(f'OK: {len(raw)} position templates valid')
+
+          formations = json.loads(Path('data/templates/formations.json').read_text())
+          positions = {t['position'] for t in raw}
+          for name, slots in formations.items():
+              for slot in slots:
+                  assert slot['position'] in positions, f'{name}: unknown position {slot[\"position\"]}'
+          print(f'OK: {len(formations)} formations reference valid positions')
+          "
+
+      - name: Generate synthetic player pool (fixture for tests)
+        run: python scripts/generate_synthetic_players.py --seed 42 --count 100
+
+      - name: Run tests with coverage
+        # No OPENROUTER_API_KEY is set here on purpose: llm_client.py's
+        # offline fallback path is what gets exercised in CI, so the whole
+        # suite runs at $0 cost and never depends on network availability.
+        run: pytest --cov=src/fta --cov-report=term-missing

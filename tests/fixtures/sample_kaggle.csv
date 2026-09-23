@@ -1,0 +1,6 @@
+sofifa_id,short_name,preferred_foot,weak_foot,age,nationality_name,player_positions,pace,movement_acceleration,stamina,short_passing,long_passing,vision,crossing,finishing,heading_accuracy,dribbling,ball_control,composure,aggression,standing_tackle,sliding_tackle,defending_marking_awareness,gk_diving,gk_handling,gk_positioning,gk_kicking
+900001,K. Sample One,Left,4,27,Testland,"CB, CDM",62,58,70,70,64,66,45,40,78,55,60,68,74,80,76,79,,,,
+900002,J. Sample Two,Right,3,23,Testland,"RB, RM",81,84,75,68,55,60,72,50,55,72,70,60,70,68,60,58,,,,
+900003,A. Sample Three,Right,5,29,Demoland,"CAM, CM",70,68,72,82,74,84,60,68,55,78,80,72,55,48,44,50,,,,
+900004,M. Sample Four,Left,4,22,Demoland,ST,76,78,68,55,45,52,50,84,70,66,58,68,60,30,25,35,,,,
+900005,B. Sample Five,Right,3,31,Testland,GK,45,40,60,50,35,40,20,10,20,30,35,72,40,20,15,10,78,74,76,70

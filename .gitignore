@@ -1,0 +1,22 @@
+# secrets
+.env
+.streamlit/secrets.toml
+
+# Python and tooling
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# Kaggle data is EA-derived: never commit the download or its conversion
+data/raw/
+data/processed/players_kaggle.json
+
+# created by the app while it runs
+teams/
+matches/
+scouting/
+logs/

@@ -1,0 +1,30 @@
+[
+  {
+    "rule_id": "familiarity",
+    "label": "Familiarity",
+    "min_points": 0,
+    "max_points": 8,
+    "description": "Neighbours on the pitch (e.g. the centre-back pair, full-back and winger on the same side) who have started matches together. Grows with every match you play: each link counts fully after 3 matches together."
+  },
+  {
+    "rule_id": "backline_balance",
+    "label": "Back-line balance",
+    "min_points": 0,
+    "max_points": 4,
+    "description": "+1 for each defender on his natural side: left-footed LB and left centre-back, right-footed RB and right centre-back. Natural angles make playing out from the back easier."
+  },
+  {
+    "rule_id": "midfield_engine",
+    "label": "Midfield engine",
+    "min_points": -6,
+    "max_points": 4,
+    "description": "Average base stamina of the midfielders: 78 or more gives +4; under 65 costs -6, because tired midfielders fade after the hour."
+  },
+  {
+    "rule_id": "shared_language",
+    "label": "Shared nationality",
+    "min_points": 0,
+    "max_points": 4,
+    "description": "+1 for each pair of neighbours from the same country (at most +4): easier communication on the pitch."
+  }
+]

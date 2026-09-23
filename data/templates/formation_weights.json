@@ -1,0 +1,33 @@
+{
+  "_comment": "Default attribute weights per formation. Each entry REPLACES the base weights from positions.json for that position (weights must sum to 1.0). Positions not listed use positions.json as-is. Teams can tune these before building; the tuned weights are saved with the team.",
+  "4-3-3": {
+    "GK":   {"role": "Goalkeeper"},
+    "FB":   {"role": "Overlapping full-back"},
+    "CB":   {"role": "Centre-back"},
+    "DM":   {"role": "Single pivot",
+             "weights": {"tackling_standing": 0.2, "positioning": 0.2, "passing_short": 0.2,
+                         "vision": 0.15, "marking": 0.1, "stamina": 0.15}},
+    "CM":   {"role": "Box-to-box midfielder"},
+    "WING": {"role": "Inside forward",
+             "weights": {"pace": 0.2, "dribbling": 0.2, "finishing": 0.15, "ball_control": 0.15,
+                         "acceleration": 0.1, "crossing": 0.1, "stamina": 0.1}},
+    "ST":   {"role": "Complete forward"}
+  },
+  "4-2-3-1": {
+    "GK":   {"role": "Goalkeeper"},
+    "FB":   {"role": "Full-back"},
+    "CB":   {"role": "Centre-back"},
+    "DM":   {"role": "Double pivot",
+             "weights": {"tackling_standing": 0.2, "marking": 0.15, "positioning": 0.2,
+                         "passing_short": 0.2, "stamina": 0.15, "vision": 0.1}},
+    "AM":   {"role": "Number 10",
+             "weights": {"through_ball": 0.25, "vision": 0.2, "dribbling": 0.15, "passing_short": 0.15,
+                         "finishing": 0.1, "composure": 0.1, "ball_control": 0.05}},
+    "WING": {"role": "Wide midfielder",
+             "weights": {"pace": 0.2, "crossing": 0.2, "dribbling": 0.15, "stamina": 0.15,
+                         "ball_control": 0.1, "acceleration": 0.1, "passing_short": 0.1}},
+    "ST":   {"role": "Lone striker",
+             "weights": {"finishing": 0.3, "heading_accuracy": 0.15, "heading_power": 0.1,
+                         "positioning": 0.15, "composure": 0.15, "ball_control": 0.15}}
+  }
+}
